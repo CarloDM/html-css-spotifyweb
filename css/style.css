@@ -175,15 +175,31 @@ width: 75%;
 }
 
 
-
 /* bottom bar  */
 
 #bottom-bar{
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  justify-items: center;
+  align-items: baseline;
   bottom: 0%; 
   width: 100%;
   height: 100px;
   background-color: grey;
   z-index: 999;
+  padding-bottom: 10px;
 }
 
+#bottom-bar .container{
+  display: flex;
+  align-items: center;
+  height: 80%;
+}
+
+#bottom-bar .container:nth-child(2){
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
