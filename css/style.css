@@ -12,13 +12,11 @@
 
 .debug {
   background-color: rgba(255, 0, 0, 0.250);
-  border: 1px solid black;
 }
 
 body {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  overflow: hidden;
-  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
 
 .main-container{
@@ -54,8 +52,8 @@ main {
 #left-bar .logo{
   display: flex;
   width: 100%;
-  height: 78px;
-  min-height: 78px;
+  height: 80px;
+
 }
 
 #left-bar .container :nth-child(n+1):not(ul):not(li),
@@ -133,7 +131,7 @@ width: 75%;
 }
 
 #main-view .main-content{
-  margin-top: 78px;
+  margin-top: 90px;
 }
 
 #main-view .main-content .evidence {
@@ -141,8 +139,11 @@ width: 75%;
   flex-wrap: wrap;
   justify-content: center;
   width: 65%;
-  margin: auto;
+  margin:auto;
   line-height: 5px;
+  text-transform:uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
 }
 
 #main-view .main-content .evidence a{
@@ -168,6 +169,7 @@ width: 75%;
 }
 
 #main-view .main-content .items .col .card {
+  position: relative;
   width: 100%;
   text-align: center;
   padding: 0 10px;
@@ -177,6 +179,33 @@ width: 75%;
   width: 100%;
   height: auto;
 }
+
+#main-view .main-content .items .col .card:hover .overlay,
+#main-view .main-content .items .col .card:hover i{
+  display: block;
+}
+
+#main-view .main-content .items .col .card .overlay{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: calc(100% - 20px);
+  margin: auto;
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#main-view .main-content .items .col .card i {
+  color: white;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5em;
+  display: none;
+}
+
 
 
 /* bottom bar  */
@@ -285,6 +314,7 @@ border: 1px solid black;
 }
 
 #bottom-bar .container.right{
+  margin-top: 5px;
   width:170px;
 }
 
