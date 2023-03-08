@@ -23,6 +23,8 @@
   display: flex;
   width: calc(100% / 2);
 }
+
+
 }
 
 
@@ -43,5 +45,19 @@
   #main-view header {
     width: calc(100vw - 50px);
   }
-} 
+
+  
+#bottom-bar .container.right .box{
+  flex-direction: column;
+  width: auto;
 }
+
+#bottom-bar .container.right{
+  justify-content: space-around;
+}
+
+#bottom-bar .container.right .time-line{
+  width: 70%;
+}
+
+} 

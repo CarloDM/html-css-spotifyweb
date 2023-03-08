@@ -22,7 +22,6 @@ body {
 }
 
 .main-container{
-  position: relative;
   width: 100vw;
   height: 100vh;
 }
@@ -188,57 +187,78 @@ width: 75%;
   justify-content: space-between;
   align-content: center;
   justify-items: center;
-  align-items: baseline;
+  /* align-items: baseline; */
   bottom: 0%; 
   width: 100%;
   height: 100px;
   background-color: grey;
   z-index: 999;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 #bottom-bar .container{
   display: flex;
   align-items: center;
-  height: 80%;
+  height: 90%;
 }
 
 #bottom-bar .container:nth-child(2){
   justify-content: center;
-  /* width: 20%; */
   height: 100%;
 }
 
 #bottom-bar .container.left{
+  width: 220px;
+  margin-top: 5px;
+  justify-content: space-evenly;
+}
 
+#bottom-bar .container.left .track{
+  display: flex;
+}
+
+#bottom-bar .container.left .track img{
+  width: 60px;
+}
+
+#bottom-bar .container.left .track .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #bottom-bar .container.center{
   display: flex;
   flex-direction: column;
-
+  padding: 0px 5px;
 }
 
 #bottom-bar .container.center .top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 60%;
   width: 200px;
 }
+
 #bottom-bar .container.center .bottom{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40%;
-
 }
 
-#bottom-bar .container.center .bottom .time-line{
+.time-line{
   position: relative;
-  width: 35vw;
   height: 7px;
   border-radius: 7px;
   margin: 0px 10px;
 }
-#bottom-bar .container.center .bottom .time-line .full{
+
+.time-line .full{
   position: absolute;
   display: flex;
   align-items: center;
@@ -251,6 +271,10 @@ width: 75%;
   background-color: azure;
 }
 
+#bottom-bar .container.center .bottom .time-line{
+  width: 25vw;
+}
+
 #bottom-bar .container.center .bottom .time-line .full div {
 width: 14px;
 height: 14px;
@@ -260,7 +284,17 @@ background-color: aliceblue;
 border: 1px solid black;
 }
 
-
 #bottom-bar .container.right{
+  width:170px;
+}
 
+#bottom-bar .container.right .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50px;
+}
+
+#bottom-bar .container.right .time-line{
+  width: 100px;
 }
