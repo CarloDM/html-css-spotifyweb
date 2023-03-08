@@ -7,6 +7,10 @@
 
 /* variabili */
 
+:root{
+  --grey1: rgb(113, 116, 120);
+  --grey2: rgb(160, 160, 160);
+}
 
 /* general */
 
@@ -24,10 +28,31 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: var(--grey1)
+}
+
 ul {
   padding-left: 0px;
   list-style: none;
   list-style-type: none;
+}
+
+h1, h2, h3, h5{
+  color: white;
+}
+
+h4, h6 {
+  color: var(--grey2);
+}
+
+.white {
+  color: white;
+}
+
+.white-h:hover{
+  color: white;
 }
 
 /* main  */
@@ -45,8 +70,9 @@ main {
   width: 220px;
   height: 100%;
   min-height: 300px;
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
   z-index: 999;
+  font-weight: 600;
 }
 
 #left-bar .logo{
@@ -56,9 +82,9 @@ main {
 
 }
 
-#left-bar .container :nth-child(n+1):not(ul):not(li),
+#left-bar .container :nth-child(n+1):not(ul):not(li):not(i),
 #left-bar .logo{
-  padding-left: 7px;
+  padding-left: 10px;
 }
 
 #left-bar .flex-container {
@@ -74,6 +100,11 @@ main {
   overflow: hidden;
 }
 
+#left-bar .flex-container .container:last-child{
+  padding-top: 10px;
+  min-height: 86px;
+}
+
 #left-bar .logo img {
 width: 75%;
 }
@@ -85,6 +116,7 @@ width: 75%;
 
 #left-bar .container ul{
   overflow-y: auto;
+  margin-top: 15px;
 }
 
 #left-bar .container h3 {
@@ -92,7 +124,26 @@ width: 75%;
   margin-bottom: 3px;
 }
 
-#left-bar ul li {
+#left-bar .flex-container i {
+  font-size: 1.5em;
+  margin-right: 10px;
+  padding-left: 1px;
+}
+
+#left-bar .flex-container .fa-plus-square{
+  font-size: 3em;
+  transform: translate(-0% , 25%);
+}
+
+.break {
+  width: 90%;
+  height: 2px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  background-color: var(--grey1);
+
 }
 
 #left-bar-small {
@@ -111,6 +162,7 @@ width: 75%;
   overflow-y: scroll;
   width: calc(100vw - 220px);
   height: calc(100vh - 100px);
+  background-color: rgb(20, 25, 34);
 }
 
 #main-view header {
@@ -121,6 +173,8 @@ width: 75%;
   align-items: center;
   width: calc(100vw - 220px);
   height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 #main-view header a{
@@ -132,6 +186,7 @@ width: 75%;
 
 #main-view .main-content{
   margin-top: 90px;
+  z-index: -3;
 }
 
 #main-view .main-content .evidence {
@@ -151,7 +206,8 @@ width: 75%;
 }
 
 #main-view .main-content h1{
-  margin: 40px 5px 20px 5px;
+  margin: 40px 5px 20px 0px;
+  padding-left: 14px;
 }
 
 #main-view .main-content .items {
@@ -160,6 +216,7 @@ width: 75%;
   align-content: flex-start;
   justify-content:space-between;
   margin: 20px auto;
+  padding-left: 10px;
 }
 
 #main-view .main-content .items .col {
@@ -220,7 +277,7 @@ width: 75%;
   margin-top: 10px;
   font-size: 0.8em;
   line-height: 0.9em;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 
@@ -233,13 +290,12 @@ width: 75%;
   justify-content: space-between;
   align-content: center;
   justify-items: center;
-  /* align-items: baseline; */
   bottom: 0%; 
   width: 100%;
   height: 100px;
-  background-color: grey;
+  color: var(--grey1);
+  background-color: rgb(20, 20, 20);
   z-index: 999;
-  /* padding-bottom: 10px; */
 }
 
 #bottom-bar .container{
@@ -276,6 +332,7 @@ width: 75%;
   margin-right: 5px;
 }
 
+
 #bottom-bar .container.center{
   display: flex;
   flex-direction: column;
@@ -288,6 +345,7 @@ width: 75%;
   align-items: center;
   height: 60%;
   width: 200px;
+  color: white;
 }
 
 #bottom-bar .container.center .bottom{
@@ -299,9 +357,10 @@ width: 75%;
 
 .time-line{
   position: relative;
-  height: 7px;
+  height: 4px;
   border-radius: 7px;
   margin: 0px 10px;
+  background-color: var(--grey1);
 }
 
 .time-line .full{
@@ -314,7 +373,8 @@ width: 75%;
   width: 30%;
   height: 100%;
   border-radius: 7px;
-  background-color: azure;
+  background-color: rgb(201, 201, 201);
+
 }
 
 #bottom-bar .container.center .bottom .time-line{
@@ -332,16 +392,16 @@ border: 1px solid black;
 
 #bottom-bar .container.right{
   margin-top: 5px;
-  width:170px;
 }
 
 #bottom-bar .container.right .box{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  width: 50px;
+}
+#bottom-bar .container.right .box span {
+  margin-left: 10px;
 }
 
-#bottom-bar .container.right .time-line{
-  width: 100px;
+#bottom-bar .container.right .time-line.amp{
+  width: 80px;
 }

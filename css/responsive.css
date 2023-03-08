@@ -44,6 +44,11 @@
   #main-view header {
     width: calc(100vw - 50px);
   }
+
+  #bottom-bar .container.left .favorite{
+    display: flex;
+    flex-direction: column;
+  }
   
 #bottom-bar .container.right .box{
   flex-direction: column;
@@ -54,8 +59,12 @@
   justify-content: space-around;
 }
 
-#bottom-bar .container.right .time-line{
-  width: 70%;
+#bottom-bar .container.right .time-line.amp{
+  display: none;
+}
+
+#bottom-bar .container.right .box{
+  margin-right: 20px;
 }
 
 } 
