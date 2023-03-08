@@ -38,7 +38,6 @@
 
   #main-view{
     width: calc(100vw - 50px);
-    height: calc(100vh - 100px);
   }
 
   #main-view header {
