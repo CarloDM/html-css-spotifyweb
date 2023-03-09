@@ -21,6 +21,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .main-container{
@@ -60,7 +61,7 @@ h4, h6 {
 main { 
   display: flex;
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   z-index: -1;
 }
 
@@ -80,7 +81,6 @@ main {
   width: 90%;
   height: 80px;
   transform: translate(-4px);
-
 }
 
 #left-bar .container :nth-child(n+1):not(ul):not(li):not(i),
@@ -146,7 +146,6 @@ width: 75%;
   margin-right: auto;
   margin-bottom: 10px;
   background-color: var(--grey1);
-
 }
 
 #left-bar-small {
@@ -173,16 +172,13 @@ width: 75%;
   font-size: 1.6em;
 }
 
-
-
-
 /* main view  */
 
 #main-view{
   position: relative;
   overflow-y: scroll;
   width: calc(100vw - 220px);
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   background-color: rgb(20, 25, 34);
 }
 
@@ -200,10 +196,12 @@ width: 75%;
 
 #main-view header a{
   margin-right: 25px;
-  padding: 10px 40px;
+  margin-top: -5px;
+  padding: 10px 35px;
   border-radius: 20px;
   border: 1px solid white;
-  font-weight: 900;
+  font-weight: 600;
+  font-size: 0.9em;
 }
 
 #main-view header a:hover{
@@ -334,7 +332,7 @@ width: 75%;
   justify-items: center;
   bottom: 0%; 
   width: 100%;
-  height: 100px;
+  height: 80px;
   color: var(--grey1);
   background-color: rgb(44, 44, 44);
   z-index: 999;
@@ -393,10 +391,12 @@ width: 75%;
   width: 200px;
   color: white;
 }
+
 #bottom-bar .container.center .top .fa-play {
   font-size: 1.8em;
   margin: 0px 10px;
 }
+
 #bottom-bar .container.center .top .fa-play:hover {
   font-size: 2em;
   margin: 0px 9px;
@@ -438,6 +438,10 @@ width: 75%;
 
 .time-line:hover .full{
   background-color: rgb(108, 230, 108);
+}
+
+.time-line.amp:hover .full{
+  background-color: rgba(255, 194, 145, 0.377);
 }
 
 #bottom-bar .container.center .bottom .time-line{
